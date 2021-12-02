@@ -1,0 +1,140 @@
+body {
+	--border: 14px;
+	--nav-width: 230px;
+	font-family: 'GothamHTF';
+	padding: var(--border);
+	margin: 0;
+	background: #06172A;
+	color: white;
+	overflow-x: hidden;
+	box-sizing: border-box;
+}
+
+
+
+/* Nav */
+.nav {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: red solid var(--border);
+	pointer-events: none;
+	z-index: 9999;
+}
+
+.nav-content {
+	position: absolute;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: var(--nav-width);
+	transition: all 0.6s;
+	pointer-events: all;
+	overflow: hidden;
+}
+
+.shrink {width: 100px;}
+
+.link-container {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 25px;
+}
+
+.page-link {
+	font-size: 26px;
+	font-weight: 600;
+	font-style: italic;
+	text-decoration: none;
+}
+.page-link:hover {
+	color: white;
+	text-decoration: underline;
+}
+
+.social-media-container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.social-media-link {font-size: 40px;}
+.social-media-link:hover {color: white;}
+
+.page-link, .social-media-link {
+	color: red;
+	transition: all 0.08s;
+}
+
+.logo-link, .logo-link img {
+	display: block;
+	width: 100%;
+	text-decoration: none;
+}
+
+
+
+/* Homepage */
+#homepage {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	height: 50vw;
+	max-width: 100%;
+	font-size: 18px;
+	margin-left: var(--nav-width);
+	overflow: hidden;
+}
+
+.pic-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+.pic-container:hover .pic-caption {
+	opacity: 1;
+	visibility: visible;
+}
+
+.pic-container:nth-child(1) img {height: 100%;}
+.pic-container:nth-child(2) img {width: 100%;}
+.pic-container:nth-child(3) img {width: 100%;}
+.pic-container:nth-child(4) img {height: 100%;}
+
+.pic-caption {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 100%;
+	width: 100%;
+	bottom: 0;
+	opacity: 0;
+	padding: 25px;
+	visibility: hidden;
+	background: #0008;
+	transition: all 0.3s;
+	cursor: default;
+	box-sizing: border-box;
+}
+
+.caption-title {
+	font-size: 75px;
+	font-weight: 900;
+	line-height: 0.85;
+	margin-bottom: 10px;
+}
+
+.caption-desc {
+	font-size: 25px;
+	font-weight: 600;
+	font-style: italic;
+	color: red;
+}
