@@ -1,6 +1,15 @@
+window.scrollTo(0, 0);
+
 $(window).scroll(function() {
-	if ($(document).scrollTop() > 100)
-		$(".nav-content").addClass("shrink");
+	if ($(window).scrollTop() > 100)
+		$(".nav").addClass("shrink");
 	else
-		$(".nav-content").removeClass("shrink");
+		$(".nav").removeClass("shrink");
 });
+
+/* $(window).scroll(function() {  
+	if ($(window).scrollTop() >= $(".header").offset().top)
+		$(".header").addClass('sticky');
+	else
+		$(".header").removeClass('sticky');
+}); */
