@@ -1,0 +1,93 @@
+/* Ultra Light */
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 200;
+	font-style: normal;
+	src: url("../fonts/AvenirNext-UltraLight.woff2");
+}
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 200;
+	font-style: italic;
+	src: url("../fonts/AvenirNext-UltraLightItalic.woff2");
+}
+
+
+
+/* Regular */
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 400;
+	font-style: normal;
+	src: url("../fonts/AvenirNext-Regular.woff2");
+}
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 400;
+	font-style: italic;
+	src: url("../fonts/AvenirNext-Italic.woff2");
+}
+
+
+
+/* Medium */
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 500;
+	font-style: normal;
+	src: url("../fonts/AvenirNext-Medium.woff2");
+}
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 500;
+	font-style: italic;
+	src: url("../fonts/AvenirNext-MediumItalic.woff2");
+}
+
+
+
+/* Demibold */
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 600;
+	font-style: normal;
+	src: url("../fonts/AvenirNext-DemiBold.woff2");
+}
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 600;
+	font-style: italic;
+	src: url("../fonts/AvenirNext-DemiBoldItalic.woff2");
+}
+
+
+
+/* Bold */
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 700;
+	font-style: normal;
+	src: url("../fonts/AvenirNext-Bold.woff2");
+}
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 700;
+	font-style: italic;
+	src: url("../fonts/AvenirNext-BoldItalic.woff2");
+}
+
+
+
+/* Heavy */
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 900;
+	font-style: normal;
+	src: url("../fonts/AvenirNext-Heavy.woff2");
+}
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 900;
+	font-style: italic;
+	src: url("../fonts/AvenirNext-HeavyItalic.woff2");
+}

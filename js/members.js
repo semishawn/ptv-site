@@ -20,6 +20,11 @@ members = [
 		grade: "senior"
 	},
 	{
+		name: "Emily Babinchak",
+		title: "Sports Director",
+		grade: "senior"
+	},
+	{
 		name: "Maya Halma",
 		title: "Studio Manager",
 		grade: "senior"
