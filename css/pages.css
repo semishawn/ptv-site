@@ -114,7 +114,6 @@
 .content-spacer {
 	min-height: var(--content-spacer-height);
 	width: 100%;
-	background: linear-gradient(180deg, var(--background-color) 0%, transparent 100%) !important;
 }
 
 .content {
@@ -199,7 +198,35 @@
 
 /* Contact */
 #contact .content {
+	--contact-container-width: 350px;
+	flex-direction: row;
+	justify-content: center;
 	padding: 0;
+}
+
+.contact-email-container a,
+.room-number {
+	font-weight: 900;
+	font-style: italic;
+	background: -webkit-linear-gradient(-60deg, #99f, red);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: dance 1.5s linear infinite;
+	animation-timing-function: steps(1, end);
+}
+
+.contact-email-container {
+	flex-direction: column;
+	align-items: center;
+	width: var(--contact-container-width);
+	font-family: "Avenir Next Condensed";
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.contact-email-container a {
+	text-decoration: none;
 }
 
 .contact-input-container {
@@ -207,7 +234,8 @@
 	--input-height: calc(7 * var(--border-width));
 	flex-direction: column;
 	align-items: center;
-	width: 350px;
+	width: var(--contact-container-width);
+	margin: 0 var(--input-height);
 }
 
 .contact-input {
@@ -254,4 +282,25 @@
 	background: red;
 	color: white;
 	transform: skewX(0deg);
+}
+
+.contact-room-container {
+	flex-direction: column;
+	align-items: center;
+	width: var(--contact-container-width);
+	font-family: "Avenir Next Condensed";
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.room-number {
+	font-size: 100px;
+	padding: 5px;
+}
+
+@keyframes dance {
+	0% {transform: rotate(-3deg);}
+	50% {transform: rotate(3deg);}
+	100% {transform: rotate(-3deg);}
 }
