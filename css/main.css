@@ -1,0 +1,125 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	--nav-height: 130px;
+	--border-width: 10px;
+	--border-color: red;
+	--background-color: #06172A;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	font-family: "Avenir Next";
+	margin: 0;
+	background: var(--background-color);
+	color: white;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+div {
+	display: flex;
+	box-sizing: border-box;
+}
+
+.blocker {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: var(--background-color);
+	z-index: 10000;
+}
+
+
+
+/* Header */
+.logo {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: var(--nav-height);
+	width: var(--nav-height);
+	background: red;
+	transition: all 0.5s;
+	cursor: pointer;
+	z-index: 9999;
+}
+
+.logo img {
+	width: 100%;
+	transition: filter 0.2s;
+}
+
+.nav-wrapper {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	overflow: hidden;
+	z-index: 9998;
+}
+
+.nav {
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	height: var(--nav-height);
+	width: 100vw;
+	font-weight: 700;
+	background: red;
+}
+
+.show-nav .nav-wrapper {width: 100%;}
+
+.social-media-container {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	height: var(--nav-height);
+	width: var(--nav-height);
+	font-size: 38px;
+	padding: calc(2 * var(--border-width));
+	background: red;
+	z-index: 9999;
+}
+
+.social-media-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	transition: filter 0.2s;
+}
+
+.logo img:hover,
+.social-media-link:hover {filter: drop-shadow(3px 3px blue);}
+
+
+
+/* Video */
+.background-video-container {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	z-index: 0;
+}
+
+.blue-overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 150, 0.7);
+}
+
+video {
+	width: 100%;
+	object-fit: cover;
+}
