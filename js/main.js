@@ -140,3 +140,9 @@ $.get(apiUrl, function(xhr) {
 	// Display actual site
 	$(".blocker").remove();
 });
+
+
+
+$(".submit-btn").click(function() {
+	$(".contact-input").val("");
+});

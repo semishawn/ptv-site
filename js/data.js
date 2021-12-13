@@ -79,7 +79,7 @@ var members = [
 	},
 	{
 		name: "Chloe Chase",
-		title: "Production Manager",
+		title: "",
 		grade: "sophomore",
 		desc: ""
 	},

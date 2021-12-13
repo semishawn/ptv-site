@@ -1,4 +1,3 @@
-/* Content Pages */
 .nav-wrapper,
 .content-block,
 .content-block > *,
@@ -115,7 +114,7 @@
 .content-spacer {
 	min-height: var(--content-spacer-height);
 	width: 100%;
-	background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,212,255,0) 100%);
+	background: linear-gradient(180deg, var(--background-color) 0%, transparent 100%) !important;
 }
 
 .content {
