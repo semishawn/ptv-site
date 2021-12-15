@@ -1,12 +1,28 @@
+.work-header {
+	font-family: "Avenir Next Condensed";
+	font-size: 80px;
+	font-weight: 900;
+	margin-bottom: 10px;
+	animation: sway 1.5s ease-in-out infinite;
+}
+.pmn-header {color: blue;}
+.profiles-header {color: red;}
+.sports-header {color: green;}
+.misc-header {color: white;}
+
+@keyframes sway {
+	0% {transform: skewX(-10deg);}
+	50% {transform: skewX(10deg);}
+	100% {transform: skewX(-10deg);}
+}
+
 .video-container {
 	display: inline-grid;
 	grid-template-columns: repeat(3, auto);
 	width: fit-content;
 	gap: 20px;
 }
-.video-container + .video-container {margin-top: 100px;}
-
-.pmn-container {margin-top: 20px;}
+.video-container:not(:last-child) {margin-bottom: 100px;}
 
 .video {
 	--aspect-ratio: calc(16 / 9);

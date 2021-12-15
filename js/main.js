@@ -18,9 +18,10 @@ $.fn.maxZ = function(selector) {
 }
 
 // Open page on block click
-$(".content-block").click(function() {
-	$(this).maxZ(".content-block");
+$(document).on("click", ".content-window:not(.open)", function() {
+	$(this).maxZ(".content-window");
 	$(this).addClass("open");
+	$(this).find(".content").scrollTop(0);
 });
 
 
@@ -28,7 +29,7 @@ $(".content-block").click(function() {
 // Close page on close button click
 $(".close-btn").click(function(e) {
 	e.stopPropagation();
-	$(this).closest(".content-block").removeClass("open");
+	$(this).closest(".content-window").removeClass("open");
 });
 
 
@@ -76,18 +77,18 @@ function createVideo(type, randRotate, id, icon, title) {
 
 // API workaround
 $.get(apiUrl, function(xhr) {
+	// Parse API data
 	var data = JSON.parse(xhr);
 
 
 
 	// Recent uploads
-	var uploadsJSON = JSON.parse(data[0]);
-	var recentUploads = uploadsJSON.items;
+	var recentUploads = data[0];
 
 	recentUploads.forEach(function(video) {
 		var randRotate = Math.ceil(Math.random() * 3) * (Math.round(Math.random()) ? 1 : -1);
-		var id = video.id.videoId;
-		var title = video.snippet.title;
+		var id = video.id;
+		var title = video.title;
 	
 		if (title.toLowerCase().includes("news")) {
 			type = "pmn";
@@ -102,8 +103,10 @@ $.get(apiUrl, function(xhr) {
 			icon = "fas fa-film";
 		}
 		else {
-			type = "misc";
-			icon = "fas fa-camera-retro";
+			if (!title.toLowerCase().includes("profile")) {
+				type = "misc";
+				icon = "fas fa-camera-retro";
+			}
 		}
 	
 		var styledVideo = createVideo(type, randRotate, id, icon, title);
@@ -120,15 +123,14 @@ $.get(apiUrl, function(xhr) {
 
 
 	// Parkland Profiles
-	var profilesJSON = JSON.parse(data[1]);
-	var profilesPlaylist = profilesJSON.items;
+	var profilesPlaylist = data[1];
 
 	profilesPlaylist.forEach(function(video) {
 		var type = "profile"
 		var randRotate = Math.ceil(Math.random() * 3) * (Math.round(Math.random()) ? 1 : -1);
-		var id = video.id.videoId;
+		var id = video.id;
 		var icon = "fas fa-users";
-		var title = video.snippet.title;
+		var title = video.title;
 	
 		var styledVideo = createVideo(type, randRotate, id, icon, title);
 
@@ -137,7 +139,7 @@ $.get(apiUrl, function(xhr) {
 
 
 
-	// Display actual site
+	// Display site when API finishes loading
 	$(".blocker").remove();
 });
 

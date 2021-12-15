@@ -1,20 +1,11 @@
 .nav-wrapper,
-.content-block,
-.content-block > *,
+.content-window,
+.content-window > *,
 .content * {
 	transition: 0.5s all;
 }
 
-.content-block-container {
-	position: relative;
-	flex-grow: 1;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-	width: 100%;
-}
-
-.content-block {
+.content-window {
 	--padding: 25px;
 	--content-spacer-height: 100px;
 	will-change: height, width;
@@ -79,7 +70,7 @@
 	background: red;
 	transition: 0.3s all;
 }
-.content-block:not(.open):hover .title:before {width: 100%;}
+.content-window:not(.open):hover .title:before {width: 100%;}
 
 .close-btn {
 	--dimension: calc(5 * var(--border-width));
@@ -130,7 +121,7 @@
 	height: 100%;
 	width: 100%;
 	background: var(--background-color);
-	cursor: default;
+	cursor: auto;
 }
 .open .content-wrapper,
 .open .close-btn {
@@ -199,39 +190,39 @@
 /* Contact */
 #contact .content {
 	--contact-container-width: 350px;
+	--input-border-width: 8px;
+	--input-height: calc(7 * var(--input-border-width));
 	flex-direction: row;
 	justify-content: center;
+	align-items: flex-start;
+	font-family: "Avenir Next Condensed";
+	font-size: 30px;
+	font-weight: 700;
 	padding: 0;
+}
+
+.contact-email-container,
+.contact-room-container {
+	flex-direction: column;
+	align-items: center;
+	width: var(--contact-container-width);
+	margin-top: var(--content-spacer-height);
 }
 
 .contact-email-container a,
 .room-number {
 	font-weight: 900;
 	font-style: italic;
-	background: -webkit-linear-gradient(-60deg, #99f, red);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: red;
 	animation: dance 1.5s linear infinite;
 	animation-timing-function: steps(1, end);
 }
 
-.contact-email-container {
-	flex-direction: column;
-	align-items: center;
-	width: var(--contact-container-width);
-	font-family: "Avenir Next Condensed";
-	font-size: 30px;
-	font-weight: 700;
-	line-height: 1.5;
-}
+.contact-email-container {line-height: 1.5;}
 
-.contact-email-container a {
-	text-decoration: none;
-}
+.contact-email-container a {text-decoration: none;}
 
 .contact-input-container {
-	--border-width: 8px;
-	--input-height: calc(7 * var(--border-width));
 	flex-direction: column;
 	align-items: center;
 	width: var(--contact-container-width);
@@ -242,11 +233,11 @@
 	height: var(--input-height);
 	width: 100%;
 	font-family: "Avenir Next";
-	font-size: calc(2 * var(--border-width));
+	font-size: calc(2 * var(--input-border-width));
 	font-weight: 600;
-	padding: var(--border-width);
-	margin-bottom: calc(1.5 * var(--border-width));
-	border: var(--border-width) solid red;
+	padding: var(--input-border-width);
+	margin-top: calc(1.5 * var(--input-border-width));
+	border: var(--input-border-width) solid red;
 	outline: 0;
 	background: transparent;
 	color: white;
@@ -259,16 +250,16 @@
 
 .body-input {
 	height: calc(3 * var(--input-height));
-	margin-top: 0;
 	resize: none;
 }
 
 .submit-btn {
 	height: var(--input-height);
-	font-size: calc(2.5 * var(--border-width));
+	font-size: calc(2.5 * var(--input-border-width));
 	font-weight: 900;
-	padding: 0 calc(2 * var(--border-width));
-	border: var(--border-width) solid red;
+	padding: 0 calc(2 * var(--input-border-width));
+	margin-top: calc(1.5 * var(--input-border-width));
+	border: var(--input-border-width) solid red;
 	outline: 0;
 	background: transparent;
 	color: red;
@@ -284,15 +275,7 @@
 	transform: skewX(0deg);
 }
 
-.contact-room-container {
-	flex-direction: column;
-	align-items: center;
-	width: var(--contact-container-width);
-	font-family: "Avenir Next Condensed";
-	font-size: 30px;
-	font-weight: 700;
-	line-height: 1;
-}
+.contact-room-container {line-height: 1;}
 
 .room-number {
 	font-size: 100px;
