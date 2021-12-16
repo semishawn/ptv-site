@@ -140,7 +140,7 @@ $.get(apiUrl, function(xhr) {
 
 
 	// Display site when API finishes loading
-	$(".blocker").remove();
+	$(".video-container").css("visibility", "visible");
 });
 
 

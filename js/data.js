@@ -6,9 +6,11 @@ var sports = [
 	"football",
 	"basketball",
 	"baseball",
+	"bball",
 	"soccer",
 	"volleyball",
 	"wrestling",
+	"swimming",
 	"golf",
 	"track",
 	"chess"
