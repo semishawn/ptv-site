@@ -112,7 +112,6 @@
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	padding-bottom: var(--content-spacer-height);
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
@@ -187,6 +186,51 @@
 
 
 
+/* Gallery */
+.carousel-slide-btn {
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	height: calc(5 * var(--border-width));
+	width: calc(3 * var(--border-width));
+	cursor: pointer;
+}
+.carousel-slide-btn:nth-child(2) {margin-left: calc(2 * var(--border-width));}
+.carousel-slide-btn:hover {transform: rotate(360deg);}
+
+.slide-bar {
+	position: absolute;
+	height: var(--border-width);
+	width: 100%;
+	background: red;
+}
+.slide-bar:nth-child(1) {transform: rotate(45deg);}
+.slide-bar:nth-child(2) {transform: rotate(-45deg);}
+.slide-left-btn .slide-bar:nth-child(1),
+.slide-right-btn .slide-bar:nth-child(2) {
+	margin-top: calc(var(--border-width) * 1.414);
+}
+.slide-left-btn .slide-bar:nth-child(2),
+.slide-right-btn .slide-bar:nth-child(1) {
+	margin-bottom: calc(var(--border-width) * 1.414);
+}
+
+.gallery-carousel {
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	align-items: center;
+	overflow-x: scroll;
+}
+
+.gallery-pic {
+	height: 70%;
+	border: red solid var(--border-width);
+	box-sizing: border-box;
+}
+
+
+
 /* Contact */
 #contact .content {
 	--contact-container-width: 350px;
@@ -198,7 +242,6 @@
 	font-family: "Avenir Next Condensed";
 	font-size: 30px;
 	font-weight: 700;
-	padding: 0;
 }
 
 .contact-email-container,

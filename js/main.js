@@ -61,13 +61,13 @@ members.forEach(function(member) {
 // Function to create custom video element
 function createVideo(type, randRotate, id, icon, title) {
 	var newVideo = $(`
-	<div class="video ${type}-video" style="transform: rotate(${randRotate}deg)">
-		<iframe src="https://www.youtube.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		<div class="video-title-container">
-			<i class="${icon}"></i>
-			<div class="video-title">${title}</div>
+		<div class="video ${type}-video" style="transform: rotate(${randRotate}deg)">
+			<iframe src="https://www.youtube.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="video-title-container">
+				<i class="${icon}"></i>
+				<div class="video-title">${title}</div>
+			</div>
 		</div>
-	</div>
 	`);
 
 	return newVideo;
@@ -76,7 +76,7 @@ function createVideo(type, randRotate, id, icon, title) {
 
 
 // API workaround
-$.get(apiUrl, function(xhr) {
+/*$.get(apiUrl, function(xhr) {
 	// Parse API data
 	var data = JSON.parse(xhr);
 
@@ -141,6 +141,33 @@ $.get(apiUrl, function(xhr) {
 
 	// Display site when API finishes loading
 	$(".video-container").css("visibility", "visible");
+});*/
+
+
+
+gallery.forEach(function(pic) {
+	var img = `<img class="gallery-pic" src="img/gallery/${pic}">`;
+	$(".gallery-carousel").append(img);
+});
+
+$(window).on("load", function() {
+	var carouselWidth = $(".gallery-carousel").outerWidth();
+	var adjustedOffset = carouselWidth / 2;
+	$(".gallery-carousel").css("margin-left", adjustedOffset + "px");
+});
+
+var imgIndex = 0;
+
+$(".carousel-slide-btn").click(function() {
+	if ($(this).is(".slide-left-btn") && imgIndex > 0) imgIndex--;
+	if ($(this).is(".slide-right-btn") && imgIndex < $(".gallery-pic").length) imgIndex++;
+
+	var currentOffset = parseInt($(".gallery-carousel").css("padding-left"));
+	var imgOffset = parseInt($(".gallery-pic").eq(imgIndex).offset().left);
+	var adjustedOffset = imgOffset;
+	$(".gallery-carousel").css("padding-right", adjustedOffset);
+
+	console.log(imgIndex, adjustedOffset);
 });
 
 

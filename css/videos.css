@@ -1,3 +1,5 @@
+#work .content {padding-bottom: var(--content-spacer-height);}
+
 .work-header {
 	font-size: 80px;
 	font-weight: 900;

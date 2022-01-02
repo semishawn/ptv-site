@@ -92,3 +92,23 @@ var members = [
 		desc: ""
 	}
 ];
+
+
+
+var gallery = [
+	"arms.webp",
+	"congresswoman.webp",
+	"dc.webp",
+	"green-screen.webp",
+	"library.webp",
+	"nathaniel.webp",
+	"obscured-newtown.webp",
+	"outside-coverage.webp",
+	"phone.webp",
+	"sillhouette-newtown.webp",
+	"sitting.webp",
+	"standing-flowers.webp",
+	"standing-green-screen.webp",
+	"standing-newtown.webp",
+	"susan-wild.webp"
+]
