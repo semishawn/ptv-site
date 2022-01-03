@@ -22,6 +22,7 @@ $(document).on("click", ".content-window:not(.open)", function() {
 	$(this).maxZ(".content-window");
 	$(this).addClass("open");
 	$(this).find(".content").scrollTop(0);
+	$(".nav").addClass("nav-hide");
 });
 
 
@@ -30,6 +31,7 @@ $(document).on("click", ".content-window:not(.open)", function() {
 $(".close-btn").click(function(e) {
 	e.stopPropagation();
 	$(this).closest(".content-window").removeClass("open");
+	$(".nav").removeClass("nav-hide");
 });
 
 
@@ -59,7 +61,10 @@ members.forEach(function(member) {
 
 
 // Function to create custom video element
-function createVideo(type, randRotate, id, icon, title) {
+function createVideo(type, id, icon, title) {
+	var rotateDegree = 3;
+	var randRotate = Math.ceil(Math.random() * rotateDegree) * (Math.round(Math.random()) ? 1 : -1);
+	
 	var newVideo = $(`
 		<div class="video ${type}-video" style="transform: rotate(${randRotate}deg)">
 			<iframe src="https://www.youtube.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -76,7 +81,7 @@ function createVideo(type, randRotate, id, icon, title) {
 
 
 // API workaround
-/*$.get(apiUrl, function(xhr) {
+$.get(apiUrl, function(xhr) {
 	// Parse API data
 	var data = JSON.parse(xhr);
 
@@ -86,7 +91,6 @@ function createVideo(type, randRotate, id, icon, title) {
 	var recentUploads = data[0];
 
 	recentUploads.forEach(function(video) {
-		var randRotate = Math.ceil(Math.random() * 3) * (Math.round(Math.random()) ? 1 : -1);
 		var id = video.id;
 		var title = video.title;
 	
@@ -94,7 +98,7 @@ function createVideo(type, randRotate, id, icon, title) {
 			type = "pmn";
 			icon = "far fa-newspaper";
 		}
-		else if (sports.some(sport => title.toLowerCase().includes(sport))) {
+		else if (sportsTerms.some(sport => title.toLowerCase().includes(sport))) {
 			type = "sports"
 			icon = "fas fa-table-tennis";
 		}
@@ -109,7 +113,7 @@ function createVideo(type, randRotate, id, icon, title) {
 			}
 		}
 	
-		var styledVideo = createVideo(type, randRotate, id, icon, title);
+		var styledVideo = createVideo(type, id, icon, title);
 
 		$("#work .content").append(styledVideo);
 	});
@@ -127,12 +131,11 @@ function createVideo(type, randRotate, id, icon, title) {
 
 	profilesPlaylist.forEach(function(video) {
 		var type = "profile"
-		var randRotate = Math.ceil(Math.random() * 3) * (Math.round(Math.random()) ? 1 : -1);
 		var id = video.id;
 		var icon = "fas fa-users";
 		var title = video.title;
 	
-		var styledVideo = createVideo(type, randRotate, id, icon, title);
+		var styledVideo = createVideo(type, id, icon, title);
 
 		$(".profiles-container").prepend(styledVideo);
 	});
@@ -141,33 +144,13 @@ function createVideo(type, randRotate, id, icon, title) {
 
 	// Display site when API finishes loading
 	$(".video-container").css("visibility", "visible");
-});*/
+});
 
 
 
 gallery.forEach(function(pic) {
-	var img = `<img class="gallery-pic" src="img/gallery/${pic}">`;
-	$(".gallery-carousel").append(img);
-});
-
-$(window).on("load", function() {
-	var carouselWidth = $(".gallery-carousel").outerWidth();
-	var adjustedOffset = carouselWidth / 2;
-	$(".gallery-carousel").css("margin-left", adjustedOffset + "px");
-});
-
-var imgIndex = 0;
-
-$(".carousel-slide-btn").click(function() {
-	if ($(this).is(".slide-left-btn") && imgIndex > 0) imgIndex--;
-	if ($(this).is(".slide-right-btn") && imgIndex < $(".gallery-pic").length) imgIndex++;
-
-	var currentOffset = parseInt($(".gallery-carousel").css("padding-left"));
-	var imgOffset = parseInt($(".gallery-pic").eq(imgIndex).offset().left);
-	var adjustedOffset = imgOffset;
-	$(".gallery-carousel").css("padding-right", adjustedOffset);
-
-	console.log(imgIndex, adjustedOffset);
+	var img = `<img class="gallery-pic" src="img/gallery/${pic.title}.webp">`;
+	$(".gallery-pic-container").append(img);
 });
 
 

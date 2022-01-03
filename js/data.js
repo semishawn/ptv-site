@@ -2,11 +2,13 @@ var apiUrl = "https://ptv-youtube-api.herokuapp.com/api/read.php";
 
 
 
-var sports = [
+var sportsTerms = [
 	"football",
 	"basketball",
 	"baseball",
 	"bball",
+	"bb game",
+	"home game",
 	"soccer",
 	"volleyball",
 	"wrestling",
@@ -96,19 +98,64 @@ var members = [
 
 
 var gallery = [
-	"arms.webp",
-	"congresswoman.webp",
-	"dc.webp",
-	"green-screen.webp",
-	"library.webp",
-	"nathaniel.webp",
-	"obscured-newtown.webp",
-	"outside-coverage.webp",
-	"phone.webp",
-	"sillhouette-newtown.webp",
-	"sitting.webp",
-	"standing-flowers.webp",
-	"standing-green-screen.webp",
-	"standing-newtown.webp",
-	"susan-wild.webp"
+	{
+		title: "arms",
+		desc: "Parkland High School Prom 2018"
+	},
+	{
+		title: "congresswoman",
+		desc: "Well-dressed congresswoman"
+	},
+	{
+		title: "dc",
+		desc: "Trip to DC 2018"
+	},
+	{
+		title: "green-screen",
+		desc: "Alexis and another girl news-casting"
+	},
+	{
+		title: "library",
+		desc: ""
+	},
+	{
+		title: "nathaniel",
+		desc: ""
+	},
+	{
+		title: "obscured-newtown",
+		desc: ""
+	},
+	{
+		title: "outside-coverage",
+		desc: ""
+	},
+	{
+		title: "phone",
+		desc: ""
+	},
+	{
+		title: "silhouette-newtown",
+		desc: ""
+	},
+	{
+		title: "sitting",
+		desc: ""
+	},
+	{
+		title: "standing-flowers",
+		desc: ""
+	},
+	{
+		title: "standing-green-screen",
+		desc: ""
+	},
+	{
+		title: "standing-newtown",
+		desc: ""
+	},
+	{
+		title: "susan-wild",
+		desc: ""
+	}
 ]
