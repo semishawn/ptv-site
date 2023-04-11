@@ -1,0 +1,107 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	--nav-dimension: 130px;
+	--border-width: 10px;
+	--border-color: red;
+	--background-color: #06172A;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	font-family: "Avenir Next";
+	margin: 0;
+	background: var(--background-color);
+	color: white;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+div {
+	display: flex;
+	box-sizing: border-box;
+}
+
+
+
+/* Nav */
+.nav {
+	--transition: 0.3s;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	height: var(--nav-dimension);
+	width: var(--nav-dimension);
+	background: red;
+	overflow: hidden;
+	z-index: 9999;
+}
+.nav:hover .logo-park {padding-right: calc(2.1 * var(--nav-dimension));}
+.nav:hover .logo-land {padding-left: calc(2.1 * var(--nav-dimension));}
+.nav:hover .social-media-container {font-size: calc(var(--nav-dimension) * 0.3);}
+
+.nav-hide {
+	bottom: calc(-1 * var(--nav-dimension));
+	left: calc(-1 * var(--nav-dimension));
+}
+
+.logo-text {
+	position: absolute;
+	flex-direction: column;
+	font-size: calc(var(--nav-dimension) * 0.375);
+	font-weight: 900;
+	font-style: italic;
+	line-height: 0.7;
+	letter-spacing: -2px;
+	transform: rotate(-10.013deg);
+}
+.logo-text * {transition: all var(--transition);} 
+
+.social-media-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: calc(var(--border-width) / 2);
+	justify-content: center;
+	align-items: center;
+	font-size: 0;
+	transition: all var(--transition);
+	z-index: 9999;
+}
+
+.social-media-link {
+	--drop-shadow: calc(var(--nav-dimension) * 0.025);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	transition: all var(--transition);
+}
+.social-media-link:hover {filter: drop-shadow(var(--drop-shadow) var(--drop-shadow) blue);}
+
+
+
+/* Video */
+.background-video-container {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	z-index: 0;
+}
+
+.blue-overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 150, 0.7);
+}
+
+video {
+	width: 100%;
+	object-fit: cover;
+}

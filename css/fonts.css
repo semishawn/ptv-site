@@ -1,0 +1,172 @@
+/* Ultra Light */
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 200;
+	font-style: normal;
+	src: url("../fonts/avenir-next/AvenirNext-UltraLight.woff2");
+}
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 200;
+	font-style: italic;
+	src: url("../fonts/avenir-next/AvenirNext-UltraLightItalic.woff2");
+}
+
+/* Regular */
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 400;
+	font-style: normal;
+	src: url("../fonts/avenir-next/AvenirNext-Regular.woff2");
+}
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 400;
+	font-style: italic;
+	src: url("../fonts/avenir-next/AvenirNext-Italic.woff2");
+}
+
+/* Medium */
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 500;
+	font-style: normal;
+	src: url("../fonts/avenir-next/AvenirNext-Medium.woff2");
+}
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 500;
+	font-style: italic;
+	src: url("../fonts/avenir-next/AvenirNext-MediumItalic.woff2");
+}
+
+/* Demibold */
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 600;
+	font-style: normal;
+	src: url("../fonts/avenir-next/AvenirNext-DemiBold.woff2");
+}
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 600;
+	font-style: italic;
+	src: url("../fonts/avenir-next/AvenirNext-DemiBoldItalic.woff2");
+}
+
+/* Bold */
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 700;
+	font-style: normal;
+	src: url("../fonts/avenir-next/AvenirNext-Bold.woff2");
+}
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 700;
+	font-style: italic;
+	src: url("../fonts/avenir-next/AvenirNext-BoldItalic.woff2");
+}
+
+/* Heavy */
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 900;
+	font-style: normal;
+	src: url("../fonts/avenir-next/AvenirNext-Heavy.woff2");
+}
+@font-face {
+	font-family: "Avenir Next";
+	font-weight: 900;
+	font-style: italic;
+	src: url("../fonts/avenir-next/AvenirNext-HeavyItalic.woff2");
+}
+
+
+
+
+
+
+/* Ultra Light */
+@font-face {
+	font-family: "Avenir Next Condensed";
+	font-weight: 200;
+	font-style: normal;
+	src: url("../fonts/avenir-next-condensed/AvenirNextCondensed-UltraLight.woff2");
+}
+@font-face {
+	font-family: "Avenir Next Condensed";
+	font-weight: 200;
+	font-style: italic;
+	src: url("../fonts/avenir-next-condensed/AvenirNextCondensed-UltraLightItalic.woff2");
+}
+
+/* Regular */
+@font-face {
+	font-family: "Avenir Next Condensed";
+	font-weight: 400;
+	font-style: normal;
+	src: url("../fonts/avenir-next-condensed/AvenirNextCondensed-Regular.woff2");
+}
+@font-face {
+	font-family: "Avenir Next Condensed";
+	font-weight: 400;
+	font-style: italic;
+	src: url("../fonts/avenir-next-condensed/AvenirNextCondensed-Italic.woff2");
+}
+
+/* Medium */
+@font-face {
+	font-family: "Avenir Next Condensed";
+	font-weight: 500;
+	font-style: normal;
+	src: url("../fonts/avenir-next-condensed/AvenirNextCondensed-Medium.woff2");
+}
+@font-face {
+	font-family: "Avenir Next Condensed";
+	font-weight: 500;
+	font-style: italic;
+	src: url("../fonts/avenir-next-condensed/AvenirNextCondensed-MediumItalic.woff2");
+}
+
+/* Demibold */
+@font-face {
+	font-family: "Avenir Next Condensed";
+	font-weight: 600;
+	font-style: normal;
+	src: url("../fonts/avenir-next-condensed/AvenirNextCondensed-DemiBold.woff2");
+}
+@font-face {
+	font-family: "Avenir Next Condensed";
+	font-weight: 600;
+	font-style: italic;
+	src: url("../fonts/avenir-next-condensed/AvenirNextCondensed-DemiBoldItalic.woff2");
+}
+
+/* Bold */
+@font-face {
+	font-family: "Avenir Next Condensed";
+	font-weight: 700;
+	font-style: normal;
+	src: url("../fonts/avenir-next-condensed/AvenirNextCondensed-Bold.woff2");
+}
+@font-face {
+	font-family: "Avenir Next Condensed";
+	font-weight: 700;
+	font-style: italic;
+	src: url("../fonts/avenir-next-condensed/AvenirNextCondensed-BoldItalic.woff2");
+}
+
+/* Heavy */
+@font-face {
+	font-family: "Avenir Next Condensed";
+	font-weight: 900;
+	font-style: normal;
+	src: url("../fonts/avenir-next-condensed/AvenirNextCondensed-Heavy.woff2");
+}
+@font-face {
+	font-family: "Avenir Next Condensed";
+	font-weight: 900;
+	font-style: italic;
+	src: url("../fonts/avenir-next-condensed/AvenirNextCondensed-HeavyItalic.woff2");
+}

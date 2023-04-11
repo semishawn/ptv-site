@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+	<style>
+		html, body {
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+		}
+
+		body {
+			border: 10px solid red;
+			padding-top: 100px;
+			margin: 0;
+			background: #06172A;
+			box-sizing: border-box;
+		}
+
+		.reel {
+			display: flex;
+			width: 100%;
+			padding: 20px;
+			background: #967969;
+		}
+
+		.reel-inner {
+			display: flex;
+		}
+
+		.gallery-pic {
+			display: block;
+			height: 200px;
+			width: 250px;
+			border-radius: 5px;
+			object-fit: cover;
+		}
+		.gallery-pic + .gallery-pic {margin-left: 10px;}
+	</style>
+
+	<div class="reel">
+		<div class="reel-inner"></div>
+	</div>
+
+	<script src="../js/data.js"></script>
+	<script>
+		gallery.forEach(function(pic) {
+			var img = `<img class="gallery-pic" src="../img/gallery/${pic.title}.webp">`;
+			$(".reel-inner").append(img);
+		});
+	</script>
+</body>
+
+</html>
